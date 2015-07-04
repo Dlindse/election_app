@@ -1,0 +1,26 @@
+<h1>Listing publications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th>Node created</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @publications.each do |publication| %>
+      <tr>
+        <td><%= publication.name %></td>
+        <td><%= publication.url %></td>
+        <td><%= publication.node_created %></td>
+              </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Publication', new_publication_path %>

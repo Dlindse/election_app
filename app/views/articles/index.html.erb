@@ -1,0 +1,30 @@
+<h1>Listing articles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th>Node created</th>
+      <th>Headline</th>
+      <th>Description</th>
+      <th>Pub date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.url %></td>
+        <td><%= article.node_created %></td>
+        <td><%= article.headline %></td>
+        <td><%= article.description %></td>
+        <td><%= article.pub_date %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Article', new_article_path %>

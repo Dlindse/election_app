@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @candidate.name %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @candidate.string %>
+</p>
+
+<p>
+  <strong>Node created:</strong>
+  <%= @candidate.node_created %>
+</p>
+
+<%= link_to 'Edit', edit_candidate_path(@candidate) %> |
+<%= link_to 'Back', candidates_path %>
