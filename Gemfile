@@ -10,9 +10,12 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc 
 gem 'puma' 
 gem 'neo4j'
+gem 'nokogiri'
+gem 'rest-client'
+gem 'neography', '~> 1.7.2'
+gem 'rufus-scheduler', '~> 3.1.3'
 
 group :development do   
-gem 'spring'   
 gem 'os'   
 gem 'better_errors'   
 gem 'binding_of_caller'   
