@@ -3,6 +3,7 @@ class Article
   property :url, type: String
   property :node_created, type: String
   property :headline, type: String
+  property :alt_headline, type: String
   property :description, type: String
   property :pub_date, type: String
 
