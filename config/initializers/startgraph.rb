@@ -4,6 +4,7 @@ require 'nokogiri'
 require 'json'
 require 'date'
 
+=begin
 
 start = Time.now
 nodesCreated = 0
@@ -11,7 +12,6 @@ relsCreated = 0
 
 payload = []
 scheduler = Rufus::Scheduler.new
-
 scheduler.in '5m' do |update|
 
 #scrape foxnews.com politics category
@@ -234,4 +234,7 @@ puts "Script created #{nodesCreated} nodes and #{relsCreated} rels in #{Time.now
 
 update.unschedule
 
+
 end
+
+=end

@@ -1,4 +1,4 @@
-<h1>Listing articles</h1>
+<h1>Articles, <%= @total %> </h1>
 
 <table>
   <thead>
@@ -15,7 +15,7 @@
   <tbody>
     <% @articles.each do |article| %>
       <tr>
-        <td><%= article.url %></td>
+        <td><a href="<%= article.url %>"><%= article.url %><a/></td>
         <td><%= article.node_created %></td>
         <td><%= article.headline %></td>
         <td><%= article.description %></td>
