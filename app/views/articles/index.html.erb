@@ -1,30 +1,25 @@
 <h1>Articles, <%= @total %> </h1>
-
 <table>
-  <thead>
+    <thead>
     <tr>
-      <th>Url</th>
-      <th>Node created</th>
-      <th>Headline</th>
-      <th>Description</th>
-      <th>Pub date</th>
-      <th colspan="3"></th>
+    <th>Headline</th>
+    <th>Description</th>
+    <th>Pub date</th>
+    <th>Node created</th>
+    <th colspan="3"></th>
     </tr>
-  </thead>
-
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><a href="<%= article.url %>"><%= article.url %><a/></td>
-        <td><%= article.node_created %></td>
-        <td><%= article.headline %></td>
+    </thead>
+        <tbody>
+            <% @articles.each do |article| %>
+        <tr>
+        <td><a href="<%= article.url %>"><%= article.headline %><a/></td>
         <td><%= article.description %></td>
         <td><%= article.pub_date %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <td><%= article.node_created %></td>
+        </tr>
+                    <% end %>
+        </tbody>
+        </table>
 
-<br>
 
 <%= link_to 'New Article', new_article_path %>

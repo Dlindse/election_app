@@ -15,7 +15,7 @@ scheduler = Rufus::Scheduler.new
 
 #setup Neography client
 @neo = Neography::Rest.new(ENV['GRAPHENEDB_URL'])
-
+# @neo = Neography::Rest.new #for local use.
 
 scheduler.in '30s' do |job|
     
