@@ -6,35 +6,7 @@
 Total Mentions:<%= candidate.mentions.count %>
 
 
-     <p> Yesterdays Mentions:
 
-       <% candidate.mentions.each do |m| %>
-        <% if m.pub_date == @yesterday %>
-        <% @y << m %>
-        <% end %>
-        <% end %>
-        <%= @y.count%> |
-
-
-        Previous Day:
-        <% candidate.mentions.each do |m| %>
-        <% if m.pub_date == @previous %>
-        <% @p << m %>
-        <% end %>
-        <% end %>
-        <%= @p.count%> |
-
-
-        Last Week:
-        <% candidate.mentions.each do |m| %>
-        <% if m.pub_date == @weekBefore %>
-        <% @w << m %>
-        <% end %>
-        <% end %>
-        <%= @w.count%> |
-
-
-    <% end %>
 
 
 
