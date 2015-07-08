@@ -14,7 +14,7 @@ payload = []
 scheduler = Rufus::Scheduler.new
 
 #setup Neography client
-@neo = Neography::Rest.new
+@neo = Neography::Rest.new(ENV['GRAPHENEDB_URL'])
 
 
 scheduler.in '30s' do |job|
@@ -24,7 +24,6 @@ scheduler.in '30s' do |job|
     Publication.create(name: "CNN", url: "http://www.cnn.com/")
     Publication.create(name: "Fox News", url: "http://www.foxnews.com/")
     
-    puts "added publications"
 
 
 
@@ -51,7 +50,6 @@ candidates.each {|candi|
     end
 }
 
-puts "added candidates"
 
 job.unschedule
 
