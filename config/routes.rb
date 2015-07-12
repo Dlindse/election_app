@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'graph_dash/home'
+
   resources :articles
 
   resources :candidates

@@ -1,12 +1,20 @@
-<h1>Listing candidates</h1>
+<center>
 
-    <% @candidates.each do |candidate| %>
+<h1><%= @candidates.count %> candidates have announced campaigns</h1>
 
-<h3><%= candidate.name %>:</h3>
-Total Mentions:<%= candidate.mentions.count %>
+<h2></h2>
 
-<% end %>
+<% @candidates.sort_by{|candi| -candi.mentions.count}.each { |candidate| %>
+    
+    <h3><%= candidate.name %>:</h3>
+    Mentions: <%= candidate.mentions.count %>
+    <h5<%= link_to 'Show', candidate %></h5>
+    <% } %>
 
+
+
+
+</center>
 
 
 

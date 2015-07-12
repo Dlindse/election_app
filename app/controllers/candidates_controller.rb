@@ -19,6 +19,7 @@ class CandidatesController < ApplicationController
   # GET /candidates/1
   # GET /candidates/1.json
   def show
+      
   end
 
   # GET /candidates/new
